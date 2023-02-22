@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calcultor</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+	<form class="calc" name="calc">
+		<input type="text" name="txt" class="value" id="input" readonly>
+		<span class="num clear" onclick="btnClr()">C</span>
+		<span class="num" onclick="btn1()">/</span>
+		<span class="num" onclick="btn2()">*</span>
+		<span class="num" onclick="btn3()">7</span>
+		<span class="num" onclick="btn4()">8</span>
+		<span class="num" onclick="btn5()">9</span>
+		<span class="num" onclick="btn6()">-</span>
+		<span class="num" onclick="btn7()">4</span>
+		<span class="num" onclick="btn8()">5</span>
+		<span class="num" onclick="btn9()">6</span>
+		<span class="num plus" onclick="btn10()">+</span>
+		<span class="num" onclick="btn11()">1</span>
+		<span class="num" onclick="btn12()">2</span>
+		<span class="num" onclick="btn13()">3</span>
+		<span class="num" onclick="btn14()">0</span>
+		<span class="num" onclick="btn15()">DEL</span>
+		<span class="num" onclick="btn16()">.</span>
+		<span class="num equals" onclick="equal()"><i>=</i></span>
+
+	</form>
+</div>
+
+
+
+<script type="text/javascript">
+
+	function btnClr(){
+       document.getElementById('input').value = ' ';
+	}
+
+	function btn1(){
+       document.getElementById('input').value += '/';
+	}
+
+	function btn2(){
+		document.getElementById('input').value += '*';
+	}
+
+	function btn3(){
+		document.getElementById('input').value += '7';
+	}
+
+	function btn4(){
+		document.getElementById('input').value += '8';
+	}
+
+	function btn5(){
+		document.getElementById('input').value += '9';
+	}
+
+	function btn6(){
+		document.getElementById('input').value += '-';
+	}
+
+	function btn7(){
+		document.getElementById('input').value += '4';
+	}
+
+	function btn8(){
+		document.getElementById('input').value += '5';
+	}
+
+	function btn9(){
+		document.getElementById('input').value += '6';
+	}
+
+	function btn10(){
+		document.getElementById('input').value += '+';
+	}
+
+	function btn11(){
+		document.getElementById('input').value += '1';
+	}
+
+	function btn12(){
+		document.getElementById('input').value += '2';
+	}
+	function btn13(){
+		document.getElementById('input').value += '3';
+	}
+	function btn14(){
+		document.getElementById('input').value += '0';
+	}
+	function btn15(){
+		let x = document.getElementById('input').value;
+		document.getElementById('input').value = x.substring(0, x. length-1);
+	}
+
+	function btn16(){
+		document.getElementById('input').value += '.';
+	}
+
+	function equal(){
+		let x = document.getElementById('input').value ;
+		document.getElementById('input').value = eval(x); 
+	}
+</script>
+</body>
+</html>
